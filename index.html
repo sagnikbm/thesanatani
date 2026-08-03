@@ -1,12 +1,506 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>The Sanatani</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:Inter,sans-serif;
+
+background:#ffffff;
+
+color:#222;
+
+line-height:1.7;
+
+}
+
+nav{
+
+position:fixed;
+
+top:0;
+
+width:100%;
+
+background:rgba(255,255,255,.95);
+
+backdrop-filter:blur(10px);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:25px 8%;
+
+border-bottom:1px solid #eee;
+
+z-index:999;
+
+}
+
+.logo{
+
+font-family:"Playfair Display",serif;
+
+font-size:30px;
+
+letter-spacing:3px;
+
+}
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:35px;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:#222;
+
+font-size:15px;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#204A87;
+
+}
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:80px;
+
+padding:140px 8% 80px;
+
+flex-wrap:wrap;
+
+}
+
+.hero-text{
+
+max-width:520px;
+
+}
+
+.hero-text h2{
+
+font-size:14px;
+
+letter-spacing:3px;
+
+color:#777;
+
+margin-bottom:20px;
+
+}
+
+.hero-text h1{
+
+font-family:"Playfair Display",serif;
+
+font-size:72px;
+
+line-height:1.05;
+
+margin-bottom:25px;
+
+}
+
+.hero-text p{
+
+font-size:18px;
+
+color:#555;
+
+margin-bottom:40px;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:16px 34px;
+
+background:#204A87;
+
+color:white;
+
+text-decoration:none;
+
+margin-right:12px;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:#17345f;
+
+}
+
+.btn-outline{
+
+background:white;
+
+color:#204A87;
+
+border:1px solid #204A87;
+
+}
+
+.btn-outline:hover{
+
+background:#204A87;
+
+color:white;
+
+}
+
+.cover{
+
+width:380px;
+
+max-width:100%;
+
+box-shadow:0 25px 50px rgba(0,0,0,.15);
+
+}
+
+.editor{
+
+padding:120px 10%;
+
+max-width:900px;
+
+margin:auto;
+
+text-align:center;
+
+}
+
+.editor h2{
+
+font-family:"Playfair Display",serif;
+
+font-size:48px;
+
+margin-bottom:35px;
+
+}
+
+.editor p{
+
+font-size:20px;
+
+color:#444;
+
+}
+
+.signature{
+
+margin-top:40px;
+
+font-family:"Playfair Display",serif;
+
+font-size:28px;
+
+}
+
+.subscribe{
+
+background:#204A87;
+
+color:white;
+
+text-align:center;
+
+padding:110px 10%;
+
+}
+
+.subscribe h2{
+
+font-family:"Playfair Display",serif;
+
+font-size:52px;
+
+margin-bottom:20px;
+
+}
+
+.subscribe p{
+
+max-width:650px;
+
+margin:auto;
+
+margin-bottom:40px;
+
+opacity:.9;
+
+}
+
+form{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:15px;
+
+}
+
+input{
+
+padding:18px;
+
+width:320px;
+
+border:none;
+
+font-size:15px;
+
+outline:none;
+
+}
+
+.subscribe button{
+
+padding:18px 35px;
+
+border:none;
+
+background:white;
+
+color:#204A87;
+
+font-size:15px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.subscribe button:hover{
+
+background:#f1f1f1;
+
+}
+
+footer{
+
+padding:45px;
+
+text-align:center;
+
+font-size:14px;
+
+color:#777;
+
+}
+
+@media(max-width:900px){
+
+.hero{
+
+text-align:center;
+
+}
+
+.hero-text h1{
+
+font-size:54px;
+
+}
+
+.logo{
+
+font-size:24px;
+
+}
+
+nav{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+nav ul{
+
+gap:20px;
+
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
-    <h1>Hello, World!</h1>
+
+<nav>
+
+<div class="logo">
+
+THE SANATANI
+
+</div>
+
+<ul>
+
+<li><a href="#">Current Issue</a></li>
+
+<li><a href="#">Archive</a></li>
+
+<li><a href="#">About</a></li>
+
+<li><a href="#subscribe">Subscribe</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h2>SEPTEMBER 2026 • VOLUME 1</h2>
+
+<h1>THE SANATANI</h1>
+
+<p>
+
+Monthly Magazine for Practising Hindus.
+
+Exploring temples, festivals, philosophy and the timeless wisdom of Sanatan Dharma.
+
+</p>
+
+<a href="#" class="btn">
+
+Read Issue
+
+</a>
+
+<a href="#subscribe" class="btn btn-outline">
+
+Subscribe
+
+</a>
+
+</div>
+
+<img src="cover.jpg" alt="The Sanatani Cover" class="cover">
+
+</section>
+
+<section class="editor">
+
+<h2>
+
+From the Editor
+
+</h2>
+
+<p>
+
+Welcome to the inaugural edition of <strong>The Sanatani</strong>, a monthly magazine dedicated to practising Hindus. Our goal is to explore the philosophy, symbolism, history and living traditions of Sanatan Dharma through beautifully designed monthly editions.
+
+</p>
+
+<div class="signature">
+
+— Sagnik Basumallik
+
+</div>
+
+</section>
+
+<section class="subscribe" id="subscribe">
+
+<h2>
+
+Never Miss an Issue
+
+</h2>
+
+<p>
+
+Subscribe to receive every monthly digital edition of The Sanatani directly in your inbox.
+
+</p>
+
+<form>
+
+<input type="email" placeholder="Email Address">
+
+<button>
+
+Subscribe
+
+</button>
+
+</form>
+
+</section>
+
+<footer>
+
+© 2026 THE SANATANI • All Rights Reserved
+
+</footer>
+
 </body>
+
 </html>
